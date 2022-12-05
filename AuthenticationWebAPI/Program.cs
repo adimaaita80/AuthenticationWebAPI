@@ -1,12 +1,19 @@
 using AuthenticationWebAPI.Extensions;
 using AuthenticationWebAPI.Persistence;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(option =>
+{
+    // Every single end-point in the API now requires authentication
+    var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+    option.Filters.Add(new AuthorizeFilter(policy));
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
