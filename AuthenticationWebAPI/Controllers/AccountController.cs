@@ -1,7 +1,7 @@
 ﻿using System.Security.Claims;
 using AuthenticationWebAPI.DTOs;
-using AuthenticationWebAPI.Entities;
 using AuthenticationWebAPI.Services;
+using Domain;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;

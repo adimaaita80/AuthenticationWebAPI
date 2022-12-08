@@ -1,10 +1,10 @@
 ﻿using System.Text;
-using AuthenticationWebAPI.Entities;
-using AuthenticationWebAPI.Persistence;
 using AuthenticationWebAPI.Services;
+using Domain;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
+using Persistence;
 
 namespace AuthenticationWebAPI.Extensions
 {

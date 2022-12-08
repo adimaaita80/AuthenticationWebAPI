@@ -1,8 +1,8 @@
 using AuthenticationWebAPI.Extensions;
-using AuthenticationWebAPI.Persistence;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
+using Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
