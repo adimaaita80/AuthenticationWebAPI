@@ -1,4 +1,5 @@
 using Application.Activities;
+using Application.Core;
 using AuthenticationWebAPI.Extensions;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -57,6 +58,8 @@ builder.Services.AddDbContext<DataContext>(options =>
 builder.Services.AddMediatR(typeof(List.Handler));
 
 builder.Services.AddIdentityServices(builder.Configuration);
+
+builder.Services.AddAutoMapper(typeof(MappingProfiles).Assembly);
 
 var app = builder.Build();
 
