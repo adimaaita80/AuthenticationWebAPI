@@ -6,14 +6,11 @@ namespace Persistence
 {
     public class DataContext : IdentityDbContext<AppUser>
     {
-        public DataContext()
-        {
-                
-        }
-
         public DataContext(DbContextOptions options) : base(options)
         {
 
         }
+
+        public DbSet<Activity> Activities { get; set; }
     }
 }
