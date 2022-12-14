@@ -19,8 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Application\Application.csproj" />
-    <ProjectReference Include="..\Persistence\Persistence.csproj" />
+    <ProjectReference Include="..\Application\GenArch.Application.csproj" />
+    <ProjectReference Include="..\Persistence\GenArch.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

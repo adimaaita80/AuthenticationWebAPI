@@ -3,23 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationWebAPI", "AuthenticationWebAPI\AuthenticationWebAPI.csproj", "{FB8D132D-C829-44C2-958C-402C4B3C2B22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenArch.WebAPI", "AuthenticationWebAPI\GenArch.WebAPI.csproj", "{FB8D132D-C829-44C2-958C-402C4B3C2B22}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD547E31-1CA3-4B12-AABC-3CFF5641945B} = {BD547E31-1CA3-4B12-AABC-3CFF5641945B}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{BD547E31-1CA3-4B12-AABC-3CFF5641945B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenArch.Application", "Application\GenArch.Application.csproj", "{BD547E31-1CA3-4B12-AABC-3CFF5641945B}"
 	ProjectSection(ProjectDependencies) = postProject
 		{0F299C9A-A0B5-4CC2-86DD-7D64FF1EB2C4} = {0F299C9A-A0B5-4CC2-86DD-7D64FF1EB2C4}
 		{37F877CE-51F7-483D-B64D-7E9933777529} = {37F877CE-51F7-483D-B64D-7E9933777529}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{0F299C9A-A0B5-4CC2-86DD-7D64FF1EB2C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenArch.Domain", "Domain\GenArch.Domain.csproj", "{0F299C9A-A0B5-4CC2-86DD-7D64FF1EB2C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{37F877CE-51F7-483D-B64D-7E9933777529}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenArch.Infrastructure", "Persistence\GenArch.Infrastructure.csproj", "{37F877CE-51F7-483D-B64D-7E9933777529}"
 	ProjectSection(ProjectDependencies) = postProject
 		{0F299C9A-A0B5-4CC2-86DD-7D64FF1EB2C4} = {0F299C9A-A0B5-4CC2-86DD-7D64FF1EB2C4}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenArch.Shared", "Shared\GenArch.Shared.csproj", "{5D35F0EE-FCFF-48C8-89D7-00C3B094F0B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CB290AAC-F56F-4FCF-A1CA-98DF84357B76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenArch.Logger", "GenArch.Logger\GenArch.Logger.csproj", "{B559EC3A-0575-4157-B2D0-8FD2F8CF479B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,9 +49,25 @@ Global
 		{37F877CE-51F7-483D-B64D-7E9933777529}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37F877CE-51F7-483D-B64D-7E9933777529}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37F877CE-51F7-483D-B64D-7E9933777529}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D35F0EE-FCFF-48C8-89D7-00C3B094F0B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D35F0EE-FCFF-48C8-89D7-00C3B094F0B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D35F0EE-FCFF-48C8-89D7-00C3B094F0B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D35F0EE-FCFF-48C8-89D7-00C3B094F0B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B559EC3A-0575-4157-B2D0-8FD2F8CF479B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B559EC3A-0575-4157-B2D0-8FD2F8CF479B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B559EC3A-0575-4157-B2D0-8FD2F8CF479B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B559EC3A-0575-4157-B2D0-8FD2F8CF479B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FB8D132D-C829-44C2-958C-402C4B3C2B22} = {CB290AAC-F56F-4FCF-A1CA-98DF84357B76}
+		{BD547E31-1CA3-4B12-AABC-3CFF5641945B} = {CB290AAC-F56F-4FCF-A1CA-98DF84357B76}
+		{0F299C9A-A0B5-4CC2-86DD-7D64FF1EB2C4} = {CB290AAC-F56F-4FCF-A1CA-98DF84357B76}
+		{37F877CE-51F7-483D-B64D-7E9933777529} = {CB290AAC-F56F-4FCF-A1CA-98DF84357B76}
+		{5D35F0EE-FCFF-48C8-89D7-00C3B094F0B6} = {CB290AAC-F56F-4FCF-A1CA-98DF84357B76}
+		{B559EC3A-0575-4157-B2D0-8FD2F8CF479B} = {CB290AAC-F56F-4FCF-A1CA-98DF84357B76}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1D3331AB-550A-45AE-BFDB-CE8E83829B86}
